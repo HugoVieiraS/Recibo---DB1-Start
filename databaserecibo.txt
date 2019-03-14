@@ -1,37 +1,37 @@
 create database recibo;
 
 create table recibo(
-sequencia int;
-valor int;
-data date;
-assinatura varchar (50);
-referente varchar (100);
+sequencia int (1000),
+valor int,
+data date,
+assinatura varchar (50),
+referente varchar (100)
 )
 
 
 
 create table endereco(
-rua varchar(100);
-nomecomple (100);
-cep int (8);
+rua varchar(100),
+nomecomple (100),
+cep int (8)
 )
 
 
 create table cidade(
-nomecidade varchar(50);
+nomecidade varchar(50),
 sigla char (2)
 )
 
 
 create table usuario(
-nomelogin varchar (100);
-cpf int (11);
-senha md5();
+nomelogin varchar (100),
+cpf int (11),
+senha md5()
 )
 
 create table cliente(
-nome varchar(100);
-cpf int (11);
+nome varchar(100),
+cpf int (11)
 )
 
 );
