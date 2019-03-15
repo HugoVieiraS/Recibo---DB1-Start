@@ -1,9 +1,9 @@
 create database recibosdb1;
 
 create table recibo(
-idRecibo int not null
-sequencia int (1000),
-valor int not null,
+idRecibo int auto_increment not null,
+sequencia int auto_increment not null,
+valor numeric (10,2) not null,
 data date,
 assinatura varchar (50),
 referente varchar (100) not null,
@@ -14,17 +14,17 @@ constraint pk_recibo primary key (idRecibo)
 
 
 create table endereco(
-idEnd int not null,
+idEnd int auto_increment not null,
 rua varchar(100) not null,
-nomecomple (100),
-cep int (8) not null,
+nomecomple varchar (100) not null,
+cep numeric(8) not null,
 
 constraint pk_endereco primary key (idEnd)
 );
 
 
 create table cidade(
-idCidade int not null,
+idCidade int auto_increment not null,
 nomecidade varchar(50) not null,
 sigla char (2) not null,
 
@@ -33,18 +33,18 @@ constraint pk_cidade primary key (idCidade)
 
 
 create table usuario(
-idUser int not null,
-nomelogin varchar (100) not null,
-cpf int (11) not null,
+idUser int auto_increment not null,
+nomelogin varchar (20) not null,
+cpf numeric(11) not null,
 senha md5() not null,
 
 constraint pk_user primary key (idUser)
 );
 
 create table cliente(
-idCli int not null,
+idCli int auto_increment not null,
 nome varchar(100) not null,
-cpf int (11) not null,
+cpf numeric (11) not null,
 
 contraint pk_cliente primary key (idCli)
 );
