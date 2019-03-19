@@ -1,0 +1,26 @@
+EXERCICIO 17 - Realize uma consulta na base de dados e exiba os seguintes dados:		
+* numero do recibo
+* data emissão do recibo
+* valor do recibo
+* nome do cliente 
+* estado do cliente
+* nome do emitente
+* estado do emitente
+
+select  re.sequencia as numero_recibo,re.data as data_recibo,re.valor as valor_recibo, pe.nome ,uf.nome as nome_estado, pe2.nome as nome_emitente, uf2.nome as estado_do_emitente
+from recibo re
+left join pessoa pe
+on re.id_cliente = pe.id
+left join cidade ci
+on re.id_cidade = ci.id
+left join uf uf
+on ci.id_uf = uf.id
+left join pessoa pe2
+on re.id_emitente = pe2.id
+left join cidade ci2
+on re.id_cidade = ci2.id
+left join uf uf2
+on ci2.id_uf = uf2.id
+order by re.data,
+pe.nome,
+pe2.nome

@@ -1,0 +1,7 @@
+EXERCICIO 13 - REMOVER PESSOAS COM LIGACAO COM A CIDADE DE RIBEIRAO PRETO
+
+
+delete from pessoa 
+using pessoa as pess
+join endereco as ends on pess.id = ends.id_pessoa
+where ends.id_cidade = '14';

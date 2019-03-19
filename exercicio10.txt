@@ -1,0 +1,22 @@
+
+EXERCICIO 10 - INSERIR DUAS PESSOAS NO ESTADO DE SP E INCLUIR DOIS ENDEREÇOS
+
+-----------------------------------------------------------------------------------------------
+insert into pessoa (nome, cpf) values ('Cristiano Roberval', '12200956634')
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (1,10,'Rua Araraquara',766, 'ABC Paulsista', 87115570, 'RESIDENCIAL');
+
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (1,10,'Avenida Brasil',3000, 'Centro', 87006666, 'COMERCIAL');
+------------------------------------------------------------------------------------------------
+
+insert into pessoa (nome, cpf) values ('Jhonatam Lins', '22190977582')
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (17,11,'Rua Santos',10012, 'Baixada Santista', 90015730, 'RESIDENCIAL');
+
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (17,11,'Avenida Raimundo Bartolomeu',663, 'Litoral', 90006644, 'COMERCIAL');

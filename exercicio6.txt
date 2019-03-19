@@ -1,0 +1,11 @@
+EXERCICIO 6 - RETORNAR AS CIDADES E SEUS RESPECTIVOS ESTADOS
+----------------------------------------------------------------
+select
+	cid.nome,
+	uf.sigla
+from
+	public.uf uf,
+	public.cidade cid
+where
+	cid.id_uf = uf.id 
+ order by uf.sigla 

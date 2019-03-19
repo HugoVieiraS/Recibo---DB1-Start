@@ -1,0 +1,12 @@
+EXERCICIO 12 - MOSTRAS O NOME E ENDEREÇO
+-------------------------------------------------------------
+select pes.nome as nome_pessoa, cid.nome as nome_cidade, uf.nome as nome_estado from pessoa pes
+inner join endereco ende
+on pes.id = ende.id_pessoa
+inner join cidade cid
+on ende.id_cidade = cid.id
+inner join uf uf
+on cid.id_uf = uf.id
+order by nome_pessoa,
+nome_estado,
+nome_cidade

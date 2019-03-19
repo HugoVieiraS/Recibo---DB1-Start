@@ -1,0 +1,12 @@
+EXERCICIO 11 CRIAR DUAS PESSOAS COM APENAS UM ENDERECO COMERCIAL
+------------------------------------------------------------------------------------------
+insert into pessoa (nome, cpf) values ('Roberto Melo', '87822540153')
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (4,12,'Avenida Vasconcelos de Melo',1001, 'Centro', 75006644, 'COMERCIAL');
+
+--------------------------------------------------------------------------------------------
+insert into pessoa (nome, cpf) values ('Clebinho Alexandrino', '01030354696')
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (3,13,'Novo Centro Empresarial',5533, 'Zona 2', 78720032, 'COMERCIAL');

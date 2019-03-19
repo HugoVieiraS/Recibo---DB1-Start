@@ -1,0 +1,10 @@
+EXERCICIO 18 - Faça uma consulta que mostre:
+* quantidade de recibos emitidos no PR
+* valor total de recibos emitidos no PR
+
+select count(sequencia) as quantidade, sum(valor) as valor_total_recibos_emitidos from recibo reci
+inner join cidade cid
+on reci.id_cidade = cid.id
+inner join uf
+on cid.id_uf = uf.id
+where uf.id = 3

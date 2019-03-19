@@ -1,0 +1,6 @@
+EXERCICIO 7 - RETORNAR QUANTAS CIDADES CADA ESTADO POSSUI
+--------------------------------------------------------------------------
+	SELECT uf.sigla, count(cid.nome) from uf
+	inner join cidade cid
+	on cid.id_uf = uf.id
+	group by uf.sigla

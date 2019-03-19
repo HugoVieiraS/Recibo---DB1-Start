@@ -1,0 +1,4 @@
+EXERCICIO 8 - CRIAR COLUNA TIPO ENDEREÇO
+
+-----------------------------------------------------------------
+alter table endereco add column tipoendereco varchar (100)

@@ -1,0 +1,6 @@
+EXERCICIO 14 MUDAR O CEP PARA 00000 DOS ENDERECOS RESIDENCIAIS
+----------------------------------------------------------------
+
+update public.endereco 
+set CEP = '00000000' 
+where tipoendereco = 'RESIDENCIAL'

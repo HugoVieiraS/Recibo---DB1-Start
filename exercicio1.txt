@@ -1,0 +1,9 @@
+EXERCICIO 1 - INSERIR TODOS OS ESTADOS BRASILEIROS
+
+insert into 
+	public.uf(nome,  sigla) 
+values('Acre', 'AC'), ('Alagoas', 'AL'), ('Amapa', 'AP'), ('Amazonas', 'AM'), ('Bahia', 'BA'), ('Ceara', 'CE'),
+('Distrito Federal', 'DF'), ('Espirito Santo', 'ES'), ('Goias', 'GO'), ('Maranhao', 'MA'), ('Mato Grosso','MT'), 
+('Mato Grosso do Sul','MS'), ('Minas Gerais','MG'), ('Pará','PA'), ('Paraiba','PB'), ('Pernanbuco','PE'), 
+('Piaui','PI'), ('Rio de Janeiro','RJ'), ('Rio Grande do Norte','RN'), ('Rio Grande do Sul','RS'), ('Rondonia','RO'), 
+('Roraima','RR'), ('Sergipe','SE'), ('Tocantins','TO')

@@ -1,0 +1,36 @@
+
+EXERCICIO 9 - INSERIR TRES PESSOAS NO ESTADO DO PR COM DOIS ENDERECOS
+
+------------------------------------------------------------------------------------------------------------------
+Primeira pessoa
+insert into pessoa (nome, cpf) values ('Vitor Hugo da Silva Vieira', '12200890954')
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (6,7,'Rua Brasil',320, 'Zona 4', 87113380, 'RESIDENCIAL');
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (6,7,'Avenida Brasil',1120, 'Zona 5', 86115580, 'COMERCIAL');
+
+--------------------------------------------------------------------------------------------------------------------
+Segunda Pessoa
+insert into pessoa (nome, cpf) values ('Alex Rodrigues', '00813255293')
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (5,8,'Rua Jucelino',009, 'Jardim das Flroes', 86113770, 'RESIDENCIAL');
+
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (5,8,'Avenida Curitiba',1566, 'Centro', 87000600, 'COMERCIAL');
+---------------------------------------------------------------------------------------------------------------------
+insert into pessoa (nome, cpf) values ('Maikol Jeferson', '90915122356')
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (8,9,'Rua São Sebastião',452, 'Parque Alagoas', 86000000, 'RESIDENCIAL');
+
+
+insert into endereco (id_cidade, id_pessoa, logradouro,numero,complemento,cep, tipoendereco) 
+VALUES (8,9,'Avenida Ameroca',1566, 'Novo Centro', 87007777, 'COMERCIAL');
+-------------------------------------------------------------------------------------------------------------------------
+select * from pessoa pes
+	inner join endereco ende
+	on pes.id = ende.id_pessoa

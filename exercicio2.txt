@@ -1,0 +1,10 @@
+EXERCICIO 2 - INSERIR CIDADES 
+--------------------------------------
+
+insert into cidade (id_uf,nome) 
+	values 
+	('4','Chapeco'),  ('4','Blumenau'), ('4','Joinville'),
+	('3','Curitiba'), ('3','Maringa'),  ('3','Lunardeli'), 
+	('3','Apucarana'),  ('3','Santa Fé'), ('3','São Miguel do Iguacu'),
+	 ('3','Arapongas'),  ('3','Ponta Grossa'),  ('3','Jandaia do Sul'),
+  	('2','Ribeirão Preto')

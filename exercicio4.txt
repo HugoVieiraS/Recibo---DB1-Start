@@ -1,0 +1,4 @@
+EXERCICIO 4 - INSERIR NOVAS CIDADES NO ESTADO DE SP
+
+insert into cidade (id_uf,nome) 
+values ('2','Presidente Prudente'), ('2','Campinas'), ('2','Santos'), ('2','Assis'), ('2','Itu')

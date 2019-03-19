@@ -1,0 +1,4 @@
+EXERCICIO 3 - REMOVER ESTADOS QUE NÃO POSSUEM CIDADES
+------------------------------------------------------
+
+delete from uf where nome = + nome do Estado

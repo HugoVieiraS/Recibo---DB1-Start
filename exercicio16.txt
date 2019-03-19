@@ -1,0 +1,8 @@
+EXERCICIO 16 - DOIS RECIBOS DE EMITENTES DIFERENTES 
+
+---------------------------------------------------------------------------------------------
+insert into recibo (id_cliente,id_emitente,id_cidade,sequencia, data, assinatura, valor)
+values (8,11,2,'0003','2017-05-21', 'Alex Cursino', 3000)
+
+insert into recibo (id_cliente,id_emitente,id_cidade,sequencia, data, assinatura, valor)
+values (7,12,2,'0004','2019-03-12', 'Roberto Carlos', 1200)
