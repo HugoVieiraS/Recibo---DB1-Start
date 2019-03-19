@@ -78,9 +78,20 @@ where
 7 - Retorne quantas cidades cada estado possui :) (não expliquei ainda)
 dica: veja group by e count()
 
+
+
+
 8 - adicione um campo tipo endereço na tabela de endereço, os tipos poderão ser: COMERCIAL, RESIDENCIAL
 
+R:
+alter table endereco add column EndComercial varchar (100)
+
+alter table endereco add column EndResidencial varchar (100)
+
+
 9 - Insira três pessoas na base de dados. Cada uma destas pessoas deve ter dois endereços (um comercial e outro residencial). As cidades que devem ser usadas são do estado do PR (você escolhe).
+
+
 
 10 -Insira duas pessoas na base de dados. Cada uma destas pessoas deve ter dois endereços (um comercial e outro residencial). As cidades que devem ser usadas são do estado de SP (você escolhe).
 
