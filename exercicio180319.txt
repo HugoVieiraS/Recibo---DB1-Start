@@ -1,0 +1,116 @@
+## Exercícios:
+
+Retirar do modo safe update para poder fazer delete e update no workbench :
+SET SQL_SAFE_UPDATES = 0;
+
+1 - faça insert na tabela UF com todas as siglas dos estados do Brasil.
+R:
+insert into 
+	public.uf(nome,  sigla) 
+values('Acre', 'AC'), ('Alagoas', 'AL'), ('Amapa', 'AP'), ('Amazonas', 'AM'), ('Bahia', 'BA'), ('Ceara', 'CE'),
+('Distrito Federal', 'DF'), ('Espirito Santo', 'ES'), ('Goias', 'GO'), ('Maranhao', 'MA'), ('Mato Grosso','MT'), 
+('Mato Grosso do Sul','MS'), ('Minas Gerais','MG'), ('Pará','PA'), ('Paraiba','PB'), ('Pernanbuco','PE'), 
+('Piaui','PI'), ('Rio de Janeiro','RJ'), ('Rio Grande do Norte','RN'), ('Rio Grande do Sul','RS'), ('Rondonia','RO'), 
+('Roraima','RR'), ('Sergipe','SE'), ('Tocantins','TO')
+
+
+2 - insira as seguintes cidades:
+Para o SC IDDDDDD 4444444444444444
+* Chapecó
+* Blumenau
+* Joinville
+
+Para o PR  IDDDDDDD   3333333
+* Curitiba
+* Maringá
+* Lunardeli
+* Apucarana
+* Santa fé
+* São Miguel do Iguaçu
+* Arapongas
+* Ponta Grossa
+* Jandaia do Sul
+
+Para o SP IIDDDDDDD    222222222
+*Ribeirão Preto
+
+R: 
+insert into cidade (id_uf,nome) 
+	values 
+	('4','Chapeco'),  ('4','Blumenau'), ('4','Joinville'),
+	('3','Curitiba'), ('3','Maringa'),  ('3','Lunardeli'), 
+	('3','Apucarana'),  ('3','Santa Fé'), ('3','São Miguel do Iguacu'),
+	 ('3','Arapongas'),  ('3','Ponta Grossa'),  ('3','Jandaia do Sul'),
+	  ('2','Ribeirão Preto')
+
+3 - Realize a remoção dos estados que não tem cidades:
+
+delete from uf where nome = + nome do Estado
+
+4 - Insira novas cidades no estado de SP
+R:
+ insert into cidade (id_uf,nome) 
+	values ('2','Presidente Prudente'), ('2','Campinas'), ('2','Santos'), ('2','Assis'), ('2','Itu')
+
+5 - Realize a atualização do nome das cidades:
+* Lunardeli para Lunardelli
+* Jandaia do Sul para Jandaia
+* Maringá para Cidade Canção
+
+R: 
+update public.cidade set nome = 'Lunardelli', id_uf =3  where id = 7
+update public.cidade set nome = 'Jandaia', id_uf =3  where id = 13
+update public.cidade set nome = 'Cidade Canção', id_uf =3  where id = 6
+
+6 - Faça um select que retorne o nome das cidades e seus respectivos estados. Ordene por estados e posteriormente pelo nome das cidades 
+
+R:
+ select
+	cid.nome,
+	uf.sigla
+from
+	public.uf uf,
+	public.cidade cid
+where
+	cid.id_uf = uf.id 
+ order by uf.sigla 
+
+7 - Retorne quantas cidades cada estado possui :) (não expliquei ainda)
+dica: veja group by e count()
+
+8 - adicione um campo tipo endereço na tabela de endereço, os tipos poderão ser: COMERCIAL, RESIDENCIAL
+
+9 - Insira três pessoas na base de dados. Cada uma destas pessoas deve ter dois endereços (um comercial e outro residencial). As cidades que devem ser usadas são do estado do PR (você escolhe).
+
+10 -Insira duas pessoas na base de dados. Cada uma destas pessoas deve ter dois endereços (um comercial e outro residencial). As cidades que devem ser usadas são do estado de SP (você escolhe).
+
+11 - Insira duas pessoas na base de dados. Cada uma destas pessoas deve ter um endereço do tipo comercial. As cidades que devem ser usadas são do estado de SC (você escolhe).
+
+12 - Faça um select que retorne o nome das pessoas e seus respectivos endereços (com cidade e estado). Ordene por nome de pessoa, nome do estado e nome da cidade
+
+13 - remova todos as pessoas que tem endereço da cidade de Ribeirão Preto
+
+14 - Mude todos os endereços residenciais do sistema. Eles devem ter CEP 00000000
+
+15 - Insira dois recibos sendo que eles devem ter clientes residentes no PR e o emitente de servico deve ser o mesmo (não importando o estado). Exemplo: 
+* cliente fusca, da cidade Curitiba, no PR. emitente: DB1, estado PR.
+* cliente Tamara, da cidade Maringá, no PR. emitente: DB1, estado PR.
+
+16 - Insira dois recibos sendo que eles devem ter clientes residentes no PR e emitentes de serviços diferentes. Exemplo: 
+* cliente fusca, da cidade Curitiba, no PR. emitente: FCV, estado PR.
+* cliente Tamara, da cidade Maringá, no PR. emitente: USP, estado SP.
+
+17 - Realize uma consulta na base de dados e exiba os seguintes dados:		
+* numero do recibo
+* data emissão do recibo
+* valor do recibo
+* nome do cliente 
+* estado do cliente
+* nome do emitente
+* estado do emitente
+
+ordene por data de recibo, nome do cliente e nome do emitente
+
+18 - Faça uma consulta que mostre:
+* quantidade de recibos emitidos no PR
+* valor total de recibos emitidos no PR
